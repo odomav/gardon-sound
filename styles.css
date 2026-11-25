@@ -65,10 +65,27 @@ footer .brand-image .brand-wordmark{width:194px}
 @media(max-width:560px){.brand-image .brand-symbol{width:27px;height:27px}.brand-image .brand-wordmark{width:min(48vw,165px)}footer .brand-image .brand-wordmark{width:180px}}
 
 /* Three aligned slices of the same console photograph, one behind each card. */
-.services article:nth-child(n){background-image:linear-gradient(180deg,#080808a8,#080808d9),url('assets/gardon-console.png');background-size:100% 100%,calc(300% + 32px) auto;background-repeat:no-repeat;background-position:center,left center}
+.services article:nth-child(n){background-image:linear-gradient(180deg,#080808a8,#080808d9),url('assets/gardon-console.png');background-size:100% 100%,calc(300% + 32px) auto;background-repeat:no-repeat;background-position:center,left center;background-origin:border-box;background-clip:border-box;overflow:hidden}
 .services article:nth-child(2){background-position:center,center center}
 .services article:nth-child(3){background-position:center,right center}
 .services article h3,.services article p,.services .service-glyph{position:relative;z-index:1;text-shadow:0 1px 12px #000}
 .services article p{color:#eeeae3}
 @media(max-width:800px){.services article:nth-child(n){background-size:100% 100%,calc(300% + 24px) auto}}
 @media(max-width:560px){.services article:nth-child(n){background-size:100% 100%,calc(300% + 20px) auto}}
+
+.nav .nav-contact:hover,.nav .nav-contact:focus-visible{color:#14110c}
+.swipe-hint{display:none}
+.contact-email{margin:18px 0 0!important;font-size:14px!important}
+.contact-email a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:800px){
+  .services{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:100%;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-bottom:0}
+  .services::-webkit-scrollbar{display:none}
+  .services article,.services article+article{height:100%;min-height:390px;scroll-snap-align:start;scroll-snap-stop:always}
+  .swipe-hint{display:flex;align-items:center;justify-content:space-between;padding:14px 4px 26px;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+}
+@media(max-width:560px){
+  .nav nav{display:none}
+  .nav .brand-image{width:100%;justify-content:space-between}
+  .services article,.services article+article{min-height:410px}
+  .swipe-hint{width:calc(100% - 28px)}
+}
