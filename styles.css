@@ -232,9 +232,10 @@ footer .brand-image .brand-wordmark{width:194px}
 .product-features{display:flex;flex-wrap:wrap;gap:7px}
 .product-features span{padding:7px 10px;border:1px solid #ffffff22;border-radius:8px;background:#09090970;color:#bcb5aa;font-size:9px;font-weight:600;letter-spacing:.03em}
 .app-panel-designer .product-features span{border-color:#9370e044}
-.product-overview .software-status{width:100%;height:82px;min-height:82px;align-items:center;text-align:center;padding:10px;gap:6px}
+.product-overview .software-status{width:100%;height:100px;min-height:100px;align-items:center;text-align:center;padding:10px;gap:6px}
 .product-overview .status-label{font-size:9px;letter-spacing:.1em}
 .product-overview .countdown-value{font-size:17px}
+.product-overview .release-date{color:#9b9284;font-size:9px;font-weight:600;letter-spacing:.12em}
 .app-panel-designer .software-status{border-color:#661cf457}
 .app-panel-designer .status-label{font-size:12px}
 .app-panel .software-details{margin:18px 0 0;border-top:1px solid #ffffff20}
