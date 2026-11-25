@@ -313,3 +313,27 @@ main,footer{position:relative;z-index:1}
 @media(max-width:800px){.signal-chain{padding:44px 36px}.signal-chain-heading{display:block}.signal-chain-heading p{max-width:610px;margin-top:16px}.maker-mark{height:112px;padding:22px}}
 @media(max-width:680px){.signal-chain{width:calc(100% - 28px);padding:35px 0;border-radius:20px;margin-bottom:10px}.signal-chain-heading{padding:0 24px}.signal-chain-heading h2{font-size:38px}.signal-chain-heading p{font-size:14px}.maker-mark{width:210px;height:100px;padding:18px 20px}.maker-mark img{max-height:62px}.maker-mark:nth-child(1) img{max-height:70px}.maker-track{animation-duration:64s}}
 @media(prefers-reduced-motion:reduce){.maker-window{overflow-x:auto;mask-image:none;scroll-snap-type:x proximity}.maker-track{animation:none;transform:none}.maker-set[aria-hidden="true"]{display:none}.maker-mark{scroll-snap-align:center}}
+
+/* A factual, compact comparison within the Theater Control panel. */
+.comparison{margin-top:24px;padding-top:25px;border-top:1px solid #ffffff20}
+.comparison-intro{max-width:760px}
+.comparison-intro h4{margin:7px 0 10px;color:#fff;font:600 clamp(21px,2vw,28px)/1.2 'Montserrat',sans-serif;letter-spacing:-.045em}
+.comparison-intro p{margin:0 0 19px;color:#bcb7b0;font:400 13px/1.7 'Montserrat',sans-serif}
+.comparison-scroll{overflow-x:auto;border:1px solid #ffffff23;border-radius:14px;background:#111;scrollbar-color:#877156 #171717}
+.comparison-scroll:focus-visible{outline:2px solid #66e7ed;outline-offset:4px}
+.comparison-table{width:100%;min-width:750px;border-collapse:collapse;text-align:left;font:400 11px/1.5 'Montserrat',sans-serif}
+.comparison-table th,.comparison-table td{width:25%;padding:14px 13px;vertical-align:top;border-right:1px solid #ffffff13;border-bottom:1px solid #ffffff14}
+.comparison-table tr>*:last-child{border-right:0}
+.comparison-table tbody tr:last-child>*{border-bottom:0}
+.comparison-table thead th{color:#ddd7ce;background:#242322;font-size:10px;font-weight:700;letter-spacing:.03em}
+.comparison-table thead th:nth-child(2){color:#84eaf0;background:#193136}
+.comparison-table tbody th{color:#eee9e1;background:#1c1b1a;font-weight:600}
+.comparison-table tbody td{color:#c4beb5}
+.comparison-table tbody td:nth-child(2){background:#10232670}
+.comparison-yes,.comparison-no,.comparison-test,.comparison-via{display:inline-block;min-width:17px;margin-right:3px;font-size:15px;font-weight:700;line-height:1}
+.comparison-yes{color:#70d9d3}.comparison-no{color:#a6a09a}.comparison-test{color:#e3bd76}.comparison-via{color:#a9a0ef}
+.comparison-takeaway{margin-top:14px;padding:14px 16px;border:1px solid #00dbe838;border-radius:11px;background:#00dbe80a;color:#d1cbc3;font:400 12px/1.6 'Montserrat',sans-serif}
+.comparison-takeaway strong{color:#8ce8eb}
+.comparison-sources{margin:13px 0 0;color:#918b83;font:400 10px/1.6 'Montserrat',sans-serif}
+.comparison-sources a{text-decoration:underline;text-underline-offset:3px;color:#b5a786}
+@media(max-width:680px){.comparison{margin-top:21px}.comparison-intro p{font-size:12px}.comparison-table{min-width:720px}.comparison-table th,.comparison-table td{padding:12px 11px}.comparison-scroll{margin-right:-3px}}
