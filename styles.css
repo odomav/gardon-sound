@@ -137,3 +137,14 @@ footer .brand-image .brand-wordmark{width:194px}
 .software-card:nth-child(2) .status-label{font-size:13px}
 @media(max-width:800px){.software-heading h2{font-size:48px}.software-platform{margin-top:18px}}
 @media(max-width:560px){.software-heading h2{font-size:42px}}
+
+/* Product identities and platform details. */
+.software-card{min-height:460px;align-items:center;text-align:center}
+.software-card-bottom{width:100%}
+.software-logo{display:block;width:140px;height:140px;object-fit:contain;margin:0 auto 22px;border-radius:25px}
+.software-card,.software-card h3,.software-card .software-platform,.software-card .status-label,.software-card .countdown-value{font-family:'Montserrat',sans-serif}
+.software-card h3{font-size:clamp(23px,2vw,30px);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:0 0 15px}
+.software-card .software-platform{margin:0 auto 14px}
+.software-card .software-status{align-items:center;text-align:center}
+.software-byline{margin:13px 0 0;color:#c4beb4;font-size:12px;line-height:1.5;letter-spacing:.03em}
+@media(max-width:560px){.software-card{min-height:435px}.software-logo{width:122px;height:122px;border-radius:22px}.software-card h3{font-size:25px}}
