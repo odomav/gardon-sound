@@ -128,3 +128,12 @@ footer .brand-image .brand-wordmark{width:194px}
 @media(max-width:1000px){.software{padding-left:42px;padding-right:42px}}
 @media(max-width:800px){.software{display:block;padding:52px 36px}.software-heading{margin-bottom:32px}.software-heading .section-label{margin-bottom:20px}.software-heading h2{font-size:48px}}
 @media(max-width:560px){.software{width:calc(100% - 28px);padding:40px 24px;border-radius:20px;margin-bottom:10px}.software-heading h2{font-size:42px}.software-grid{grid-template-columns:1fr;gap:12px}.software-card{min-height:285px;padding:24px;border-radius:18px}.software-card h3{font-size:30px}.software-monogram{width:62px;height:62px;font-size:38px;padding-top:10px}.countdown-value{font-size:clamp(16px,5vw,21px)}}
+
+.software-heading h2{font-size:clamp(34px,3.2vw,44px)}
+.software-heading h2 span{white-space:nowrap}
+.software-platform{display:inline-flex;align-items:center;gap:10px;margin-top:27px;padding:7px 14px 7px 8px;border:1px solid #c9ab7238;border-radius:12px;background:#090909;color:#d6c39b;font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.platform-icon{display:block;flex:none;width:36px;height:42px;background:#000 url('assets/available-for-mac.png') -8px center/121px 42px no-repeat}
+.software-card:nth-child(2) .software-status{min-height:100px;align-items:center;text-align:center}
+.software-card:nth-child(2) .status-label{font-size:13px}
+@media(max-width:800px){.software-heading h2{font-size:48px}.software-platform{margin-top:18px}}
+@media(max-width:560px){.software-heading h2{font-size:42px}}
