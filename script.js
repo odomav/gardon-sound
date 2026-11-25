@@ -25,6 +25,41 @@ if (countdown) {
   }
 }
 
+for (const list of document.querySelectorAll('[role="tablist"]')) {
+  const tabs = [...list.querySelectorAll(':scope > [role="tab"]')];
+  const centerSelectedPlan = (tab, smooth = false) => {
+    if (!list.classList.contains('plan-switch') || list.scrollWidth <= list.clientWidth) return;
+    const left = tab.offsetLeft - list.offsetLeft - (list.clientWidth - tab.clientWidth) / 2;
+    list.scrollTo({ left, behavior: smooth ? 'smooth' : 'auto' });
+  };
+  const activate = (selected, focus = false) => {
+    for (const tab of tabs) {
+      const active = tab === selected;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+    }
+    centerSelectedPlan(selected, focus);
+    if (focus) selected.focus();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab));
+    tab.addEventListener('keydown', (event) => {
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(tabs[next], true);
+    });
+  });
+  const selected = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
+  if (selected && list.classList.contains('plan-switch')) requestAnimationFrame(() => centerSelectedPlan(selected));
+}
+
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const targets = [...document.querySelectorAll('.reveal')];
   const observer = new IntersectionObserver((entries) => {
