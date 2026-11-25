@@ -63,6 +63,17 @@ for (const list of document.querySelectorAll('[role="tablist"]')) {
   }
 }
 
+const comparisonToggle = document.querySelector('.comparison-toggle');
+if (comparisonToggle) {
+  const extraRows = [...document.querySelectorAll('.comparison-extra')];
+  comparisonToggle.addEventListener('click', () => {
+    const expanded = comparisonToggle.getAttribute('aria-expanded') !== 'true';
+    extraRows.forEach((row) => { row.hidden = !expanded; });
+    comparisonToggle.setAttribute('aria-expanded', String(expanded));
+    comparisonToggle.querySelector('span').textContent = expanded ? 'Show less' : 'Show full comparison';
+  });
+}
+
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const targets = [...document.querySelectorAll('.reveal')];
   const observer = new IntersectionObserver((entries) => {
