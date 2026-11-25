@@ -111,3 +111,20 @@ footer .brand-image .brand-wordmark{width:194px}
   .quote-band p{font-size:clamp(23px,6.6vw,36px);letter-spacing:-.05em}
   .people h2{font-size:clamp(30px,8.1vw,42px)}
 }
+
+/* Software previews share the same quiet, rounded visual system. */
+.software{display:grid;grid-template-columns:22% minmax(0,1fr);gap:28px;margin:0 auto 24px;padding:74px 68px;border:1px solid #ffffff10;border-radius:26px;background:linear-gradient(145deg,#181716,#101010 80%)}
+.software-heading .section-label{display:block;padding-top:8px;margin-bottom:34px}
+.software-heading h2{font-size:clamp(38px,4.4vw,62px);margin:0}
+.software-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.software-card{display:flex;flex-direction:column;justify-content:space-between;min-height:330px;padding:27px;border:1px solid #c9ab7226;border-radius:22px;background:radial-gradient(circle at 78% 12%,#a17c3930,transparent 48%),linear-gradient(145deg,#25221d,#141414 75%);box-shadow:0 14px 38px #0003}
+.software-card:nth-child(2){background:radial-gradient(circle at 78% 12%,#776a5530,transparent 48%),linear-gradient(145deg,#211f1c,#141414 75%)}
+.software-monogram{display:flex;align-items:baseline;justify-content:center;width:70px;height:70px;padding-top:12px;border:1px solid #c9ab724a;border-radius:17px;background:#090909;color:#fff;font-family:'Playfair Display',serif;font-size:42px;line-height:1;letter-spacing:-.1em}
+.software-monogram span+span{color:var(--gold)}
+.software-card h3{font-family:'Playfair Display',serif;font-size:clamp(27px,2.4vw,36px);font-weight:400;line-height:1.15;margin:0 0 19px}
+.software-status{min-height:72px;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:15px 17px;border:1px solid #c9ab7231;border-radius:13px;background:#080807bb}
+.status-label{color:var(--gold);font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em}
+.countdown-value{color:var(--ink);font-family:Manrope,sans-serif;font-size:clamp(17px,1.65vw,23px);font-variant-numeric:tabular-nums;letter-spacing:.025em;white-space:nowrap}
+@media(max-width:1000px){.software{padding-left:42px;padding-right:42px}}
+@media(max-width:800px){.software{display:block;padding:52px 36px}.software-heading{margin-bottom:32px}.software-heading .section-label{margin-bottom:20px}.software-heading h2{font-size:48px}}
+@media(max-width:560px){.software{width:calc(100% - 28px);padding:40px 24px;border-radius:20px;margin-bottom:10px}.software-heading h2{font-size:42px}.software-grid{grid-template-columns:1fr;gap:12px}.software-card{min-height:285px;padding:24px;border-radius:18px}.software-card h3{font-size:30px}.software-monogram{width:62px;height:62px;font-size:38px;padding-top:10px}.countdown-value{font-size:clamp(16px,5vw,21px)}}
