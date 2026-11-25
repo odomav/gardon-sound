@@ -57,7 +57,10 @@ for (const list of document.querySelectorAll('[role="tablist"]')) {
     });
   });
   const selected = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
-  if (selected && list.classList.contains('plan-switch')) requestAnimationFrame(() => centerSelectedPlan(selected));
+  if (selected && list.classList.contains('plan-switch')) {
+    requestAnimationFrame(() => centerSelectedPlan(selected));
+    window.addEventListener('resize', () => centerSelectedPlan(tabs.find((tab) => tab.getAttribute('aria-selected') === 'true')));
+  }
 }
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
