@@ -108,6 +108,6 @@ footer .brand-image .brand-wordmark{width:194px}
 @media(max-width:560px){
   .intro h2{font-size:clamp(28px,8.2vw,42px)}
   .intro h2 span,.quote-line,.people-line{white-space:nowrap}
-  .quote-band p{font-size:clamp(26px,7.1vw,38px);letter-spacing:-.05em}
+  .quote-band p{font-size:clamp(23px,6.6vw,36px);letter-spacing:-.05em}
   .people h2{font-size:clamp(30px,8.1vw,42px)}
 }
