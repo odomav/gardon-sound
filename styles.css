@@ -89,3 +89,24 @@ footer .brand-image .brand-wordmark{width:194px}
   .services article,.services article+article{min-height:410px}
   .swipe-hint{width:calc(100% - 28px)}
 }
+
+/* Keep the image and tint flush with the rounded hero border. */
+.hero{background-origin:border-box;background-clip:border-box}
+.hero:before,.hero:after{inset:-1px}
+.hero-image{top:-1px;left:-1px;width:calc(100% + 2px)}
+
+.service-glyph svg{display:block;width:26px;height:26px}
+
+@media(max-width:800px){
+  .services article,.services article+article{display:flex;flex-direction:column}
+  .services h3{margin-top:auto}
+  .services p{margin-bottom:0}
+  .services article:hover{transform:none}
+  .reveal-armed .services .reveal,.reveal-armed .services .reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}
+}
+@media(max-width:560px){
+  .intro h2{font-size:clamp(28px,8.2vw,42px)}
+  .intro h2 span,.quote-line,.people-line{white-space:nowrap}
+  .quote-band p{font-size:clamp(26px,7.1vw,38px);letter-spacing:-.05em}
+  .people h2{font-size:clamp(30px,8.1vw,42px)}
+}
