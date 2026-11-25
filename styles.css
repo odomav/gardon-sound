@@ -53,3 +53,13 @@ footer{min-height:140px}
 .hero-bottom{bottom:28px;z-index:3}
 @media(max-width:800px){.nav{inset:24px 0 auto}.hero{height:calc(92svh - 24px);min-height:680px;background:linear-gradient(0deg,#111 15%,#19130e80),url('assets/auditorium-hero.jpg') center/cover}.hero-inner{padding:84px 0 0}}
 @media(max-width:560px){.nav{inset:22px 0 auto}.hero{height:calc(92svh - 20px);min-height:640px;margin:10px;background:linear-gradient(0deg,#0b0b0b 8%,#0b0b0bd9 55%,#0b0b0b55),url('assets/auditorium-hero.jpg') center/cover}.hero:after{background:linear-gradient(0deg,#0b0b0b70,#0b0b0b85)}.hero-inner{padding:98px 0 0}.hero-bottom{bottom:20px}}
+
+/* Supplied Gardon Sound marks */
+.brand-image{gap:12px;flex:none;line-height:0}
+.brand-image img{display:block;object-fit:contain}
+.brand-image .brand-symbol{width:38px;height:38px}
+.brand-image .brand-wordmark{width:238px;height:auto}
+footer .brand-image .brand-symbol{width:32px;height:32px}
+footer .brand-image .brand-wordmark{width:194px}
+@media(max-width:800px){.brand-image{gap:8px}.brand-image .brand-symbol{width:31px;height:31px}.brand-image .brand-wordmark{width:190px}}
+@media(max-width:560px){.brand-image .brand-symbol{width:27px;height:27px}.brand-image .brand-wordmark{width:min(48vw,165px)}footer .brand-image .brand-wordmark{width:180px}}
