@@ -294,3 +294,17 @@ main,footer{position:relative;z-index:1}
 @keyframes production-marquee{to{transform:translateX(-50%)}}
 @media(max-width:680px){.productions{width:calc(100% - 28px);padding:35px 0 38px;border-radius:20px;margin-bottom:10px}.productions-heading{display:block;padding:0 24px 24px}.productions-heading h2{font-size:38px}.productions-heading p{margin-top:12px}.production-card{width:210px}.production-track{animation-duration:52s}}
 @media(prefers-reduced-motion:reduce){.production-window{overflow-x:auto;mask-image:none;scroll-snap-type:x proximity}.production-track{animation:none}.production-card{scroll-snap-align:start}}
+
+/* A quiet credit to the makers in the production signal chain. */
+.signal-chain{margin:0 auto 24px;padding:52px 48px 48px;border:1px solid #c9ab7229;border-radius:26px;background:radial-gradient(circle at 88% 0,#9a744021,transparent 45%),linear-gradient(145deg,#1d1a17,#101010 80%)}
+.signal-chain-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:30px}
+.signal-chain-heading .section-label{display:block;padding:0;margin-bottom:12px}
+.signal-chain-heading h2{margin:0;font-size:clamp(33px,3.5vw,48px)}
+.signal-chain-heading p{max-width:390px;margin:0 0 4px;color:#b9b3a9;font-size:15px;line-height:1.65}
+.maker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;overflow:hidden;border:1px solid #c9ab7226;border-radius:18px;background:#c9ab7226}
+.maker-mark{display:flex;align-items:center;justify-content:center;min-width:0;height:124px;padding:26px 34px;background:#171614}
+.maker-mark img{display:block;max-width:100%;max-height:76px;width:auto;height:auto;object-fit:contain}
+.maker-mark:nth-child(1) img{max-height:88px}
+.maker-mark:nth-child(6) img{max-height:78px}
+@media(max-width:800px){.signal-chain{padding:44px 36px}.signal-chain-heading{display:block}.signal-chain-heading p{max-width:610px;margin-top:16px}.maker-mark{height:112px;padding:22px}}
+@media(max-width:680px){.signal-chain{width:calc(100% - 28px);padding:35px 24px;border-radius:20px;margin-bottom:10px}.signal-chain-heading h2{font-size:38px}.signal-chain-heading p{font-size:14px}.maker-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:14px}.maker-mark{height:100px;padding:18px 20px}.maker-mark img{max-height:62px}.maker-mark:nth-child(1) img{max-height:70px}}
