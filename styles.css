@@ -275,3 +275,22 @@ main,footer{position:relative;z-index:1}
 .hero-ambient{position:absolute;inset:-18%;z-index:2;opacity:.27;mix-blend-mode:screen}
 @keyframes ambient-drift{from{transform:translate3d(-4%,3%,0) rotate(-1deg)}to{transform:translate3d(4%,-3%,0) rotate(1deg)}}
 @media(prefers-reduced-motion:reduce){.ambient-streaks{animation:none}}
+
+/* A continuous, small-format reel of selected stage credits. */
+.productions{margin:0 auto 24px;padding:52px 0 54px;border:1px solid #ffffff12;border-radius:26px;background:linear-gradient(145deg,#191715,#101010 82%);overflow:hidden}
+.productions-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;padding:0 48px 28px}
+.productions-heading .section-label{display:block;padding:0;margin-bottom:12px}
+.productions-heading h2{font-size:clamp(33px,3.5vw,48px);margin:0}
+.productions-heading p{max-width:260px;margin:0 0 5px;color:#aaa49a;font-size:14px;line-height:1.6}
+.production-window{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+.production-track{display:flex;width:max-content;animation:production-marquee 58s linear infinite}
+.production-window:hover .production-track{animation-play-state:paused}
+.production-set{display:flex;flex:none;gap:16px;padding-right:16px}
+.production-card{flex:none;width:228px;margin:0;padding:8px 8px 17px;border:1px solid #c9ab722a;border-radius:17px;background:#24211e}
+.production-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;background:#111}
+.production-card figcaption{display:flex;flex-direction:column;gap:5px;min-height:76px;padding:15px 7px 0;font-family:'Montserrat',sans-serif}
+.production-card strong{color:#f5f1ea;font-size:13px;font-weight:600;line-height:1.28}
+.production-card figcaption span{color:#c3a875;font-size:11px;line-height:1.35}
+@keyframes production-marquee{to{transform:translateX(-50%)}}
+@media(max-width:680px){.productions{width:calc(100% - 28px);padding:35px 0 38px;border-radius:20px;margin-bottom:10px}.productions-heading{display:block;padding:0 24px 24px}.productions-heading h2{font-size:38px}.productions-heading p{margin-top:12px}.production-card{width:210px}.production-track{animation-duration:52s}}
+@media(prefers-reduced-motion:reduce){.production-window{overflow-x:auto;mask-image:none;scroll-snap-type:x proximity}.production-track{animation:none}.production-card{scroll-snap-align:start}}
