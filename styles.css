@@ -264,3 +264,12 @@ footer .brand-image .brand-wordmark{width:194px}
 @media(max-width:390px){.app-tab img{width:36px;height:36px}.app-tab strong{font-size:10px}.app-tab small{font-size:7px}}
 @media(max-width:390px){.product-topline .software-platform{padding:4px 7px;gap:5px;font-size:8px}.product-kicker{font-size:8px;letter-spacing:.08em}}
 @media(prefers-reduced-motion:reduce){.app-tab,.plan-option{transition:none}}
+
+/* A restrained gold glimmer beneath the page, with a matching veil over the hero image. */
+body{isolation:isolate}
+main,footer{position:relative;z-index:1}
+.ambient-streaks{pointer-events:none;background:linear-gradient(108deg,transparent 13%,#e5cc8d 13.07%,transparent 13.2%,transparent 39%,#c9ab72 39.07%,transparent 39.23%,transparent 71%,#c9ab72 71.08%,transparent 71.25%),radial-gradient(ellipse at 77% 52%,#c9ab7240,transparent 56%);background-size:120% 120%,100% 100%;filter:blur(3px);animation:ambient-drift 48s ease-in-out infinite alternate}
+.page-ambient{position:fixed;inset:-16%;z-index:0;opacity:.13}
+.hero-ambient{position:absolute;inset:-16%;z-index:2;opacity:.11;mix-blend-mode:screen}
+@keyframes ambient-drift{from{transform:translate3d(-3%,2%,0)}to{transform:translate3d(3%,-2%,0)}}
+@media(prefers-reduced-motion:reduce){.ambient-streaks{animation:none}}
