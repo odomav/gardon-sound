@@ -96,6 +96,7 @@ footer .brand-image .brand-wordmark{width:194px}
 .hero-image{top:-1px;left:-1px;width:calc(100% + 2px)}
 
 .service-glyph svg{display:block;width:26px;height:26px}
+.quote-band span.quote-line{display:inline;font:inherit;letter-spacing:inherit;color:inherit;padding:0;margin:0}
 
 @media(max-width:800px){
   .services article,.services article+article{display:flex;flex-direction:column}
