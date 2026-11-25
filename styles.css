@@ -146,7 +146,6 @@ footer .brand-image .brand-wordmark{width:194px}
 .software-card h3{font-size:clamp(23px,2vw,30px);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:0 0 15px}
 .software-card .software-platform{margin:0 auto 14px}
 .software-card .software-status{height:96px;min-height:96px;align-items:center;text-align:center}
-.software-byline{margin:13px 0 0;color:#c4beb4;font-size:12px;line-height:1.5;letter-spacing:.03em}
 .suite-description{max-width:240px;margin:22px 0 0;color:#aaa8a2;font:400 13px/1.7 'Montserrat',sans-serif}
 .software-suite-bar{grid-column:1/-1;display:flex;align-items:center;gap:11px;padding:0 2px 2px;color:#b8b2a8;font:600 10px/1.4 'Montserrat',sans-serif;letter-spacing:.16em}
 .suite-indicator{display:inline-flex;align-items:center;gap:4px}
@@ -157,3 +156,40 @@ footer .brand-image .brand-wordmark{width:194px}
 .software-card:nth-of-type(2){border-color:#661cf43d;background:radial-gradient(circle at 50% 0,#661cf418,transparent 52%),linear-gradient(145deg,#242020,#141414 75%)}
 @media(max-width:800px){.suite-description{max-width:500px;margin-top:12px}.software-suite-bar{margin-top:2px}}
 @media(max-width:560px){.software-card{min-height:445px}.software-logo{width:122px;height:122px}.software-card h3{font-size:25px}.software-suite-bar{font-size:9px;letter-spacing:.1em}.suite-platform{font-size:8px}}
+
+/* The software suite and Theater Control pre-order plans. */
+.software-card{min-height:525px}
+.software-details{margin:18px 0 0;text-align:left;border-top:1px solid #ffffff1c}
+.software-details summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer;list-style:none;color:#bdb9b1;font:600 11px/1.4 'Montserrat',sans-serif;letter-spacing:.02em}
+.software-details summary::-webkit-details-marker{display:none}
+.software-details summary::after{content:'+';display:grid;place-items:center;flex:none;width:25px;height:25px;border:1px solid #ffffff28;border-radius:8px;color:var(--gold);font-size:18px;font-weight:400;line-height:1}
+.software-details[open] summary::after{content:'−'}
+.software-details p{margin:0 0 12px;color:#aaa8a2;font:400 12px/1.65 'Montserrat',sans-serif}
+.product-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;margin-top:7px;padding:0 16px;border-radius:12px;background:#00dbe8;color:#061316;font:700 11px/1.3 'Montserrat',sans-serif;letter-spacing:.03em;transition:background .2s,transform .2s}
+.product-cta:hover{background:#8af5fb;transform:translateY(-2px)}
+.product-cta span{font-size:18px;font-weight:400}
+.product-cta-muted{justify-content:center;background:#ffffff0a;color:#817a89;cursor:default}
+.product-cta-muted:hover{background:#ffffff0a;transform:none}
+.product-cta-muted span{display:none}
+.software-pricing{grid-column:1/-1;margin-top:20px;padding-top:28px;border-top:1px solid #ffffff20;scroll-margin-top:30px}
+.pricing-intro{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:22px}
+.pricing-eyebrow,.plan-label{color:#66e7ed;font:700 10px/1.4 'Montserrat',sans-serif;letter-spacing:.16em}
+.pricing-intro h3{margin:10px 0 0;color:#f5f1ea;font:600 clamp(23px,2.3vw,32px)/1.18 'Montserrat',sans-serif;letter-spacing:-.04em}
+.pricing-intro p{max-width:265px;margin:0;color:#aaa8a2;font:400 12px/1.6 'Montserrat',sans-serif}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.price-card{display:flex;flex-direction:column;min-width:0;min-height:292px;padding:24px 20px 20px;border:1px solid #ffffff1d;border-radius:18px;background:linear-gradient(150deg,#242322,#171717 72%);font-family:'Montserrat',sans-serif}
+.price-card-featured{border-color:#00dbe873;background:radial-gradient(circle at 85% 0,#00dbe81a,transparent 58%),linear-gradient(150deg,#252a2a,#171717 72%)}
+.price-card h4{margin:10px 0 6px;color:#fff;font-size:20px;font-weight:600;letter-spacing:-.04em}
+.plan-price{margin:0;color:#fff;font-size:clamp(25px,2.4vw,34px);font-weight:600;letter-spacing:-.05em;white-space:nowrap}
+.plan-price span{color:#aaa8a2;font-size:11px;font-weight:500;letter-spacing:0}
+.plan-description{margin:17px 0 22px;color:#b9b6b0;font-size:11px;line-height:1.6}
+.plan-button{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:42px;margin-top:auto;padding:9px 11px;border:1px solid #ffffff28;border-radius:10px;background:#ffffff0b;color:#f4f0e9;font-size:10px;font-weight:700;line-height:1.3;transition:background .2s,color .2s}
+.plan-button:hover{background:#fff;color:#111}
+.plan-button span{font-size:17px;font-weight:400}
+.price-card-featured .plan-button{border-color:#00dbe8;background:#00dbe8;color:#071517}
+.price-card-featured .plan-button:hover{background:#8af5fb}
+.pricing-note{margin:16px 0 0;color:#817d76;font:400 10px/1.5 'Montserrat',sans-serif}
+@media(max-width:1100px){.pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.price-card-featured{grid-column:1/-1;min-height:230px}}
+@media(max-width:800px){.software-card{min-height:525px}.pricing-intro{align-items:start}.price-card-featured{min-height:292px}}
+@media(max-width:560px){.software-card{min-height:500px}.pricing-intro{display:block}.pricing-intro p{max-width:none;margin-top:12px}.pricing-grid{grid-template-columns:1fr}.price-card,.price-card-featured{grid-column:auto;min-height:270px}.plan-price{font-size:31px}.software-pricing{margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.product-cta,.plan-button{transition:none}}
