@@ -118,7 +118,7 @@ footer .brand-image .brand-wordmark{width:194px}
 .software-heading h2{font-size:clamp(38px,4.4vw,62px);margin:0}
 .software-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .software-card{display:flex;flex-direction:column;justify-content:space-between;min-height:330px;padding:27px;border:1px solid #c9ab7226;border-radius:22px;background:radial-gradient(circle at 78% 12%,#a17c3930,transparent 48%),linear-gradient(145deg,#25221d,#141414 75%);box-shadow:0 14px 38px #0003}
-.software-card:nth-child(2){background:radial-gradient(circle at 78% 12%,#776a5530,transparent 48%),linear-gradient(145deg,#211f1c,#141414 75%)}
+.software-card:nth-of-type(2){background:radial-gradient(circle at 78% 12%,#776a5530,transparent 48%),linear-gradient(145deg,#211f1c,#141414 75%)}
 .software-monogram{display:flex;align-items:baseline;justify-content:center;width:70px;height:70px;padding-top:12px;border:1px solid #c9ab724a;border-radius:17px;background:#090909;color:#fff;font-family:'Playfair Display',serif;font-size:42px;line-height:1;letter-spacing:-.1em}
 .software-monogram span+span{color:var(--gold)}
 .software-card h3{font-family:'Playfair Display',serif;font-size:clamp(27px,2.4vw,36px);font-weight:400;line-height:1.15;margin:0 0 19px}
@@ -133,18 +133,27 @@ footer .brand-image .brand-wordmark{width:194px}
 .software-heading h2 span{white-space:nowrap}
 .software-platform{display:inline-flex;align-items:center;gap:10px;margin-top:27px;padding:7px 14px 7px 8px;border:1px solid #c9ab7238;border-radius:12px;background:#090909;color:#d6c39b;font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;white-space:nowrap}
 .platform-icon{display:block;flex:none;width:36px;height:42px;background:#000 url('assets/available-for-mac.png') -8px center/121px 42px no-repeat}
-.software-card:nth-child(2) .software-status{min-height:100px;align-items:center;text-align:center}
-.software-card:nth-child(2) .status-label{font-size:13px}
+.software-card:nth-of-type(2) .software-status{align-items:center;text-align:center}
+.software-card:nth-of-type(2) .status-label{font-size:13px}
 @media(max-width:800px){.software-heading h2{font-size:48px}.software-platform{margin-top:18px}}
 @media(max-width:560px){.software-heading h2{font-size:42px}}
 
 /* Product identities and platform details. */
 .software-card{min-height:460px;align-items:center;text-align:center}
 .software-card-bottom{width:100%}
-.software-logo{display:block;width:140px;height:140px;object-fit:contain;margin:0 auto 22px;border-radius:25px}
+.software-logo{display:block;width:140px;height:140px;object-fit:contain;margin:0 auto 22px}
 .software-card,.software-card h3,.software-card .software-platform,.software-card .status-label,.software-card .countdown-value{font-family:'Montserrat',sans-serif}
 .software-card h3{font-size:clamp(23px,2vw,30px);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:0 0 15px}
 .software-card .software-platform{margin:0 auto 14px}
-.software-card .software-status{align-items:center;text-align:center}
+.software-card .software-status{height:96px;min-height:96px;align-items:center;text-align:center}
 .software-byline{margin:13px 0 0;color:#c4beb4;font-size:12px;line-height:1.5;letter-spacing:.03em}
-@media(max-width:560px){.software-card{min-height:435px}.software-logo{width:122px;height:122px;border-radius:22px}.software-card h3{font-size:25px}}
+.suite-description{max-width:240px;margin:22px 0 0;color:#aaa8a2;font:400 13px/1.7 'Montserrat',sans-serif}
+.software-suite-bar{grid-column:1/-1;display:flex;align-items:center;gap:11px;padding:0 2px 2px;color:#b8b2a8;font:600 10px/1.4 'Montserrat',sans-serif;letter-spacing:.16em}
+.suite-indicator{display:inline-flex;align-items:center;gap:4px}
+.suite-indicator i{display:block;width:7px;height:7px;border-radius:2px;background:#00dbe8}
+.suite-indicator i+i{background:#661cf4}
+.suite-platform{margin-left:auto;color:#827e77}
+.software-card:first-of-type{border-color:#00dbe82b;background:radial-gradient(circle at 50% 0,#00dbe80f,transparent 52%),linear-gradient(145deg,#242321,#141414 75%)}
+.software-card:nth-of-type(2){border-color:#661cf43d;background:radial-gradient(circle at 50% 0,#661cf418,transparent 52%),linear-gradient(145deg,#242020,#141414 75%)}
+@media(max-width:800px){.suite-description{max-width:500px;margin-top:12px}.software-suite-bar{margin-top:2px}}
+@media(max-width:560px){.software-card{min-height:445px}.software-logo{width:122px;height:122px}.software-card h3{font-size:25px}.software-suite-bar{font-size:9px;letter-spacing:.1em}.suite-platform{font-size:8px}}
