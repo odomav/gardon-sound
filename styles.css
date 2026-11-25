@@ -42,12 +42,13 @@ footer{min-height:140px}
 @media(max-width:560px){.nav{top:24px;border-radius:15px}.hero{margin:10px;border-radius:21px;min-height:640px;height:calc(92svh - 20px)}.intro.section,.people.section{width:calc(100% - 28px);padding:40px 24px;border-radius:20px}.intro.section{margin-top:8px}.services{width:calc(100% - 28px);gap:10px}.services article,.services article+article{padding:26px 24px;border-radius:18px}.quote-band .wrap{width:calc(100% - 28px);padding:45px 24px;border-radius:20px}.people.section{margin-top:10px;margin-bottom:10px}.profiles{margin-top:30px}.profile,.profile:last-child{display:block;padding:18px;border-radius:18px}.portrait-photo{width:100%;height:auto;aspect-ratio:1;margin-bottom:22px;border-radius:13px}.profile h3{font-size:31px}.profile p{font-size:15px}.closing{padding:0 14px}.closing .wrap{width:100%;padding:54px 25px;border-radius:20px}.closing h2{font-size:clamp(42px,11vw,52px)}footer{width:calc(100% - 44px)}}
 @media(prefers-reduced-motion:reduce){.services article{transition:none}}
 
-/* Keep the auditorium photograph intact at every viewport width. */
-.nav{position:relative;inset:auto;top:auto;margin:16px auto 12px}
-.hero{display:block;height:auto;min-height:0;margin:0 16px;background:#111}
-.hero-image{display:block;width:100%;height:auto}
-.hero:after,.stage-light{display:none}
-.hero-inner{position:relative;padding:60px 0 100px}
-.hero-bottom{bottom:28px}
-@media(max-width:800px){.nav{top:auto;margin:16px auto 12px}.hero{height:auto;min-height:0}.hero-inner{padding:52px 0 94px}}
-@media(max-width:560px){.nav{margin:10px auto}.hero{height:auto;min-height:0;margin:0 10px}.hero-inner{padding:42px 0 85px}.hero-bottom{bottom:20px}}
+/* Overlay the original hero composition without cropping the panorama. */
+.nav{position:absolute;inset:32px 0 auto;margin:auto;z-index:4}
+.hero{display:flex;height:min(850px,calc(100svh - 32px));min-height:680px;margin:16px;background:#111;align-items:center}
+.hero-image{position:absolute;top:0;left:0;display:block;width:100%;height:auto;z-index:0}
+.hero:after{display:block;inset:0;height:auto;z-index:1;background:linear-gradient(90deg,#0b0b0be8 0%,#0b0b0bba 34%,#0b0b0b38 75%,#0b0b0b14),linear-gradient(0deg,#0b0b0b 0%,transparent 68%)}
+.stage-light{display:none}
+.hero-inner{position:relative;z-index:2;padding:90px 0 0}
+.hero-bottom{bottom:28px;z-index:2}
+@media(max-width:800px){.nav{inset:24px 0 auto}.hero{height:calc(92svh - 24px);min-height:680px;background:linear-gradient(0deg,#111 15%,#19130e80),url('assets/auditorium-hero.jpg') center/cover}.hero-inner{padding:84px 0 0}}
+@media(max-width:560px){.nav{inset:22px 0 auto}.hero{height:calc(92svh - 20px);min-height:640px;margin:10px;background:linear-gradient(0deg,#0b0b0b 8%,#0b0b0bd9 55%,#0b0b0b55),url('assets/auditorium-hero.jpg') center/cover}.hero:after{background:linear-gradient(0deg,#0b0b0b70,#0b0b0b85)}.hero-inner{padding:98px 0 0}.hero-bottom{bottom:20px}}
