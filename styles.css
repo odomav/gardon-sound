@@ -193,3 +193,64 @@ footer .brand-image .brand-wordmark{width:194px}
 @media(max-width:800px){.software-card{min-height:525px}.pricing-intro{align-items:start}.price-card-featured{min-height:292px}}
 @media(max-width:560px){.software-card{min-height:500px}.pricing-intro{display:block}.pricing-intro p{max-width:none;margin-top:12px}.pricing-grid{grid-template-columns:1fr}.price-card,.price-card-featured{grid-column:auto;min-height:270px}.plan-price{font-size:31px}.software-pricing{margin-top:14px}}
 @media(prefers-reduced-motion:reduce){.product-cta,.plan-button{transition:none}}
+
+/* A single-app workspace keeps product information and pricing together. */
+.software-workspace{min-width:0;font-family:'Montserrat',sans-serif}
+.software-suite-bar{margin:0 0 16px}
+.app-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.app-tab{display:flex;align-items:center;gap:13px;min-width:0;padding:12px 14px;border:1px solid #ffffff1a;border-radius:15px;background:#1b1a19;color:#dfdbd5;text-align:left;cursor:pointer;font-family:'Montserrat',sans-serif;transition:border-color .2s,background .2s}
+.app-tab:hover{background:#252322}
+.app-tab.is-active{border-color:#00dbe87a;background:linear-gradient(115deg,#103134,#201f1d)}
+.app-tab:nth-child(2).is-active{border-color:#661cf4a8;background:linear-gradient(115deg,#29203c,#201d25)}
+.app-tab img{display:block;flex:none;width:54px;height:54px;object-fit:contain}
+.app-tab strong,.app-tab small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-tab strong{font-size:14px;letter-spacing:-.025em}
+.app-tab small{margin-top:5px;color:#a6a099;font-size:9px;font-weight:700;letter-spacing:.1em}
+.app-tab.is-active small{color:#65dfe7}
+.app-tab:nth-child(2).is-active small{color:#a58bff}
+.app-tab-arrow{margin-left:auto;color:#77716d;font-size:20px}
+.app-tab.is-active .app-tab-arrow{color:#65dfe7}
+.app-tab:nth-child(2).is-active .app-tab-arrow{color:#a58bff}
+.app-panel{min-width:0;padding:25px 28px 23px;border:1px solid #00dbe844;border-radius:20px;background:radial-gradient(circle at 85% 0,#00dbe814,transparent 50%),linear-gradient(145deg,#242323,#141414 76%);box-shadow:0 14px 38px #0003}
+.app-panel-designer{border-color:#661cf45c;background:radial-gradient(circle at 85% 0,#661cf426,transparent 50%),linear-gradient(145deg,#242020,#141414 76%)}
+.app-panel[hidden],.plan-detail[hidden]{display:none}
+.product-overview{display:grid;grid-template-columns:108px minmax(0,1fr) 210px;align-items:center;gap:20px}
+.product-overview .software-logo{width:108px;height:108px;margin:0}
+.product-heading{min-width:0}
+.product-kicker{color:#66e7ed;font-size:9px;font-weight:700;letter-spacing:.15em}
+.app-panel-designer .product-kicker{color:#ab91ff}
+.product-heading h3{margin:7px 0;color:#fff;font-size:clamp(23px,2.2vw,31px);font-weight:600;letter-spacing:-.045em;line-height:1.1}
+.product-heading p{margin:0 0 12px;color:#bbb7b1;font-size:11px;line-height:1.5}
+.product-heading .software-platform{margin:0;padding:4px 11px 4px 5px;font-size:9px;border-radius:9px}
+.product-heading .platform-icon{width:28px;height:31px;background-position:-6px center;background-size:89px 31px}
+.product-overview .software-status{width:100%;height:82px;min-height:82px;align-items:center;text-align:center;padding:10px;gap:6px}
+.product-overview .status-label{font-size:9px;letter-spacing:.1em}
+.product-overview .countdown-value{font-size:17px}
+.app-panel-designer .software-status{border-color:#661cf457}
+.app-panel-designer .status-label{font-size:12px}
+.app-panel .software-details{margin:20px 0 0;border-top:1px solid #ffffff20}
+.app-panel .software-details summary{min-height:43px;padding:0;color:#c7c2b9}
+.app-panel .software-details p{max-width:600px;margin:0 0 14px}
+.inline-pricing{border-top:1px solid #ffffff20;padding-top:22px;scroll-margin-top:20px}
+.pricing-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px}
+.pricing-heading h4{margin:5px 0 0;color:#fff;font-size:22px;font-weight:600;letter-spacing:-.04em}
+.pricing-heading>span{color:#89857e;font-size:9px;font-weight:700;letter-spacing:.11em;white-space:nowrap}
+.plan-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.plan-option{min-width:0;min-height:96px;padding:14px 12px;border:1px solid #ffffff22;border-radius:12px;background:#151515;color:#eee9e2;text-align:left;font-family:'Montserrat',sans-serif;cursor:pointer;transition:border-color .2s,background .2s}
+.plan-option:hover{background:#222}
+.plan-option.is-active{border-color:#00dbe8;background:linear-gradient(145deg,#163438,#181c1d)}
+.plan-option>span{display:block;margin-bottom:14px;color:#a6a099;font-size:9px;font-weight:700;letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.plan-option.is-active>span{color:#6ce7ed}
+.plan-option strong{display:block;font-size:clamp(18px,1.8vw,24px);font-weight:600;letter-spacing:-.05em;white-space:nowrap}
+.plan-option strong small{font-size:10px;font-weight:500;letter-spacing:0;color:#a7a39c}
+.plan-option del{margin-right:4px;color:#918a84;font-size:12px;font-weight:500;letter-spacing:0;text-decoration-thickness:1px}
+.plan-detail{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:73px;margin-top:12px;padding:12px 15px;border:1px solid #ffffff16;border-radius:12px;background:#0909098c}
+.plan-detail p{max-width:410px;margin:0;color:#c0bbb3;font-size:11px;line-height:1.5}
+.plan-detail .product-cta,.plan-unavailable{flex:none;min-height:40px;margin:0;padding:0 14px;white-space:nowrap;font-size:10px}
+.plan-unavailable{display:flex;align-items:center;border:1px solid #ffffff24;border-radius:10px;color:#a8a39b;font-weight:600}
+.inline-pricing .pricing-note{margin:10px 0 0}
+@media(max-width:1200px){.product-overview{grid-template-columns:88px minmax(0,1fr)}.product-overview .software-logo{width:88px;height:88px}.product-overview .software-status{grid-column:1/-1}.plan-option strong{font-size:19px}.plan-option del{display:block;margin-bottom:3px}}
+@media(max-width:800px){.software-workspace{width:100%}.product-overview{grid-template-columns:100px minmax(0,1fr) 190px}.product-overview .software-logo{width:100px;height:100px}.product-overview .software-status{grid-column:auto}.plan-option del{display:inline}}
+@media(max-width:680px){.software{padding:40px 24px}.app-panel{padding:21px}.product-overview{grid-template-columns:76px minmax(0,1fr);gap:14px}.product-overview .software-logo{width:76px;height:76px}.product-overview .software-status{grid-column:1/-1}.product-heading h3{font-size:23px}.app-tab{gap:8px;padding:9px}.app-tab img{width:42px;height:42px}.app-tab strong{font-size:11px}.app-tab small{font-size:8px}.app-tab-arrow{display:none}.plan-detail{align-items:stretch;flex-direction:column;gap:12px}.plan-detail .product-cta,.plan-unavailable{justify-content:center;width:100%}.pricing-heading>span{display:none}.plan-switch{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:2px}.plan-switch::-webkit-scrollbar{display:none}.plan-option{flex:0 0 82%;scroll-snap-align:center}.plan-option strong{font-size:24px}.plan-option del{display:inline}.software-suite-bar{font-size:9px;letter-spacing:.1em}.suite-platform{font-size:8px}}
+@media(max-width:390px){.app-tab img{width:36px;height:36px}.app-tab strong{font-size:10px}.app-tab small{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.app-tab,.plan-option{transition:none}}
