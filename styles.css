@@ -6,3 +6,48 @@
 @media(max-width:800px){.footer-legal{align-items:flex-start;text-align:left;width:100%}.portrait-photo{height:145px}.reveal-armed .services .reveal:nth-child(n){transition-delay:0s}}
 @media(max-width:560px){.portrait-photo{height:auto;aspect-ratio:1}}
 @media(prefers-reduced-motion:reduce){.reveal-armed .reveal{opacity:1;transform:none;transition:none}}
+
+/* A softer, card-based surface system. */
+body{background:radial-gradient(circle at 86% 19%,#25201555,transparent 32%),#090909}
+.nav{top:32px;bottom:auto;height:74px;padding:0 26px;border:1px solid #ffffff1c;border-radius:18px;background:#161512c9;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 16px 50px #0005}
+.nav-contact{border:0;border-radius:11px;background:#ffffff14;padding:14px 19px}
+.nav-contact:hover{background:#c9ab72;color:#14110c}
+.hero{margin:16px;border:1px solid #ffffff12;border-radius:28px;min-height:680px;height:min(850px,calc(100svh - 32px));box-shadow:0 24px 70px #0006}
+.hero:after{background:linear-gradient(transparent,#0e0d0caa)}
+.button{border-radius:12px}
+.intro.section{grid-template-columns:22% minmax(0,1fr);gap:28px;margin-top:28px;margin-bottom:16px;padding:74px 68px 62px;border:1px solid #ffffff10;border-radius:26px;background:linear-gradient(135deg,#1b1a18,#111111 78%);box-shadow:0 18px 50px #0003}
+.services{gap:16px;border:0;margin-bottom:24px}
+.services article,.services article+article{min-height:330px;padding:35px 34px 38px;border:1px solid #ffffff12;border-radius:22px;background:linear-gradient(155deg,#24211c,#171615 52%,#141414);box-shadow:0 14px 38px #0003;transition:transform .25s ease,background .25s ease,border-color .25s ease}
+.services article:nth-child(2){background:linear-gradient(155deg,#2b271f,#191816 55%,#151515)}
+.services article:hover{transform:translateY(-4px);border-color:#c9ab7252;background:#24211d}
+.service-glyph{display:grid;place-items:center;width:48px;height:48px;border:1px solid #c9ab7250;border-radius:14px;background:#c9ab7214;font-size:27px}
+.services h3{margin:38px 0 16px}
+.services p{font-size:15px}
+.quote-band{background:transparent;padding:0}
+.quote-band .wrap{grid-template-columns:22% minmax(0,1fr);gap:28px;padding:74px 68px;border:1px solid #c9ab7233;border-radius:26px;background:radial-gradient(circle at 95% 0,#a47c412e,transparent 42%),linear-gradient(125deg,#29241e,#171513 70%);box-shadow:0 18px 50px #0004}
+.people.section{grid-template-columns:22% minmax(0,1fr);gap:28px;margin-top:24px;margin-bottom:24px;padding:74px 68px 78px;border:1px solid #ffffff10;border-radius:26px;background:linear-gradient(145deg,#191817,#101010 80%)}
+.people-content{min-width:0}
+.profiles{display:grid;gap:16px;margin-top:50px}
+.profile,.profile:last-child{grid-template-columns:210px minmax(0,1fr);gap:30px;padding:24px;border:1px solid #ffffff14;border-radius:22px;background:linear-gradient(135deg,#24221f,#1b1a18 72%);box-shadow:0 12px 35px #0003}
+.portrait-photo{height:210px;border:0;border-radius:15px}
+.profile h3{margin:10px 0}
+.profile p{margin-bottom:20px}
+.profile a{display:inline-flex;align-items:center;border:0;border-radius:9px;background:#ffffff0d;padding:10px 12px}
+.profile a:hover{background:#c9ab7222}
+.closing{background:transparent;padding:0 16px}
+.closing .wrap{width:min(1320px,calc(100% - 10vw));padding:75px 68px 82px;border-radius:26px;background:radial-gradient(circle at 90% 0,#f3ddaa88,transparent 45%),#c8aa75;box-shadow:0 20px 55px #0005}
+footer{min-height:140px}
+@media(max-width:1000px){.intro.section,.people.section,.quote-band .wrap{padding-left:42px;padding-right:42px}.profile,.profile:last-child{grid-template-columns:170px minmax(0,1fr);gap:24px}.portrait-photo{height:170px}}
+@media(max-width:800px){.nav{top:24px;height:66px;padding:0 18px}.hero{height:calc(92svh - 24px);min-height:680px}.intro.section,.people.section{display:block;padding:52px 36px}.intro.section{margin-top:16px}.quote-band .wrap{display:block;padding:54px 36px}.section-label{padding-top:0}.services{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:16px}.services article,.services article+article{min-height:0;padding:26px 30px;border:1px solid #ffffff12}.services h3{margin:18px 0 12px}.people.section{margin-top:16px;margin-bottom:16px}.profiles{margin-top:38px}.profile,.profile:last-child{display:grid;grid-template-columns:145px minmax(0,1fr);gap:20px;padding:20px}.portrait-photo{height:145px}.closing{padding:0 16px}.closing .wrap{width:calc(100% - 44px);padding:64px 36px}footer{padding-top:36px;padding-bottom:36px}}
+@media(max-width:560px){.nav{top:24px;border-radius:15px}.hero{margin:10px;border-radius:21px;min-height:640px;height:calc(92svh - 20px)}.intro.section,.people.section{width:calc(100% - 28px);padding:40px 24px;border-radius:20px}.intro.section{margin-top:8px}.services{width:calc(100% - 28px);gap:10px}.services article,.services article+article{padding:26px 24px;border-radius:18px}.quote-band .wrap{width:calc(100% - 28px);padding:45px 24px;border-radius:20px}.people.section{margin-top:10px;margin-bottom:10px}.profiles{margin-top:30px}.profile,.profile:last-child{display:block;padding:18px;border-radius:18px}.portrait-photo{width:100%;height:auto;aspect-ratio:1;margin-bottom:22px;border-radius:13px}.profile h3{font-size:31px}.profile p{font-size:15px}.closing{padding:0 14px}.closing .wrap{width:100%;padding:54px 25px;border-radius:20px}.closing h2{font-size:clamp(42px,11vw,52px)}footer{width:calc(100% - 44px)}}
+@media(prefers-reduced-motion:reduce){.services article{transition:none}}
+
+/* Keep the auditorium photograph intact at every viewport width. */
+.nav{position:relative;inset:auto;top:auto;margin:16px auto 12px}
+.hero{display:block;height:auto;min-height:0;margin:0 16px;background:#111}
+.hero-image{display:block;width:100%;height:auto}
+.hero:after,.stage-light{display:none}
+.hero-inner{position:relative;padding:60px 0 100px}
+.hero-bottom{bottom:28px}
+@media(max-width:800px){.nav{top:auto;margin:16px auto 12px}.hero{height:auto;min-height:0}.hero-inner{padding:52px 0 94px}}
+@media(max-width:560px){.nav{margin:10px auto}.hero{height:auto;min-height:0;margin:0 10px}.hero-inner{padding:42px 0 85px}.hero-bottom{bottom:20px}}
